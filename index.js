@@ -10,7 +10,15 @@ const tutorials = [
   'what is the difference between event capturing and bubbling?',
   'what is JSONP?'
 ];
-
+// titleCased(): returns an array with title case tutorial names. 
+// Note that this function takes no arguments and should use the global tutorials variable as data.
 const titleCased = () => {
-  return tutorials
+  return tutorials.map((strings) => {
+    let stringSplit = strings.split(" ");
+  const capitalizedFirst = stringSplit.map((word) => {
+    return word.charAt(0).toUpperCase() + word.slice(1);
+  });
+    return capitalizedFirst.join(" ");
+  });
 }
+ 
